@@ -6,6 +6,6 @@ import { defineConfig } from 'vite'
 export default defineConfig(({ mode }) => ({
   // GitHub Pages serves the app under /<repo name>/; use your repository's name.
   // base: mode === 'production' ? '/pokesearch/' : '/',
-  base: mode === 'production' ? '/my-pokesearch/' : '/',
+  base: mode === 'production' ? '/my-pokesearch-jb/' : '/',
   plugins: [react(), tailwindcss()],
 }))
