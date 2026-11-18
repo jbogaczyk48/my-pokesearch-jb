@@ -55,7 +55,7 @@ it('can remove a card', () => {
 it('makes only one card shiny', () => {
   cy.get('#pikachu-card').should('be.visible')
   cy.get('input[id=pokemon-name]').type('Bulbasaur{enter}')
-  cy.get('#bulbasaur-card button').contains('Make Shiny').click()
+  cy.get('#bulbasaur-card button').contains('Shine').click()
   cy.get('#bulbasaur-card img').should('have.attr', 'src').and('include', 'shiny')
   cy.get('#pikachu-card img').should('have.attr', 'src').and('not.include', 'shiny')
   cy.get('#bulbasaur-card button').contains('Make Normal').click()
@@ -65,7 +65,7 @@ it('makes only one card shiny', () => {
 it('keeps a card shiny when another card is removed', () => {
   cy.get('#pikachu-card').should('be.visible')
   cy.get('input[id=pokemon-name]').type('Bulbasaur{enter}')
-  cy.get('#bulbasaur-card button').contains('Make Shiny').click()
+  cy.get('#bulbasaur-card button').contains('Shine').click()
   cy.get('#pikachu-card button').contains('Remove').click()
   cy.get('#pikachu-card').should('not.exist')
   cy.get('#bulbasaur-card img').should('have.attr', 'src').and('include', 'shiny')
