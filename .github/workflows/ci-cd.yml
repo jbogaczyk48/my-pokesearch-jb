@@ -35,7 +35,7 @@ jobs:
           install: false
           start: npm run preview
           # wait-on: 'http://localhost:4173/pokesearch/'
-          wait-on: 'http://localhost:4173/my-pokesearch'
+          wait-on: 'http://localhost:4173/my-pokesearch-jb'
           # config: baseUrl=http://localhost:4173/pokesearch/,specPattern=cypress/e2e-prod/**/*.cy.js
           config: baseUrl=http://localhost:4173/pokesearch/,specPattern=cypress/e2e-prod/**/*.cy.js
 
